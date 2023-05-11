@@ -10,3 +10,6 @@ console.log(path.extname(__filename));
 console.log(path.extname(__dirname));
 
 console.log(path.parse(__filename));
+console.log(path.format(path.parse(__filename)));
+console.log(path.isAbsolute(__filename));
+console.log(path.isAbsolute("./data.json"));
