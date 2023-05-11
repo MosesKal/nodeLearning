@@ -1,8 +1,14 @@
-const PizzaShop = require("./pizza-shop");
-const pizzaShop = new PizzaShop();
+const fs = require("./file.txt");
 
-pizzaShop.order();
-pizzaShop.displayOrderNumber();
+const fileContent = fs.readFileSync("./file.txt");
+
+console.log(fileContent);
+
+// const PizzaShop = require("./pizza-shop");
+// const pizzaShop = new PizzaShop();
+
+// pizzaShop.order();
+// pizzaShop.displayOrderNumber();
 
 // const path = require("node:path");
 
