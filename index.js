@@ -15,13 +15,23 @@
 // console.log(path.isAbsolute("./data.json"));
 // console.log(path.join("folder1", "folder2", "index.js"));
 
-const greeting = (name) => {
-  console.log(`Hello ${name}`);
-};
+// const greeting = (name) => {
+//   console.log(`Hello ${name}`);
+// };
 
-const greetingMoses = (greetingFn) => {
-  const name = "MosesDev";
-  greetingFn(name);
-};
+// const greetingMoses = (greetingFn) => {
+//   const name = "MosesDev";
+//   greetingFn(name);
+// };
 
-greetingMoses(greeting);
+// greetingMoses(greeting);
+
+const EventEmetter = require("node:events");
+
+const emitter = new EventEmetter();
+
+emitter.on("order-pizza", () => {
+  console.log("Order received!, Baking a pizza");
+});
+
+emitter.emit("order-pizza");
