@@ -1,3 +1,9 @@
+const PizzaShop = require("./pizza-shop");
+const pizzaShop = new PizzaShop();
+
+pizzaShop.order();
+pizzaShop.displayOrderNumber();
+
 // const path = require("node:path");
 
 // console.log(__filename);
@@ -26,18 +32,18 @@
 
 // greetingMoses(greeting);
 
-const EventEmetter = require("node:events");
+// const EventEmetter = require("node:events");
 
-const emitter = new EventEmetter();
+// const emitter = new EventEmetter();
 
-emitter.on("order-pizza", (size, topping) => {
-  console.log(`Order received!, Baking a ${size} pizza ${topping}`);
-});
+// emitter.on("order-pizza", (size, topping) => {
+//   console.log(`Order received!, Baking a ${size} pizza ${topping}`);
+// });
 
-emitter.on("order-pizza", (size) => {
-  if (size === "large") {
-    console.log("Serving complementary drink!");
-  }
-});
+// emitter.on("order-pizza", (size) => {
+//   if (size === "large") {
+//     console.log("Serving complementary drink!");
+//   }
+// });
 
-emitter.emit("order-pizza", "large", "mushroom");
+// emitter.emit("order-pizza", "large", "mushroom");
