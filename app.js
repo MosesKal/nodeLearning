@@ -45,7 +45,7 @@ app.put("/api/pokemons/:id", (req, res) => {
   res.json(success(message, pokemonUpated));
 });
 
-app.delete("/apit/pokemons/:id", (req, res) => {
+app.delete("/api/pokemons/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const pokemonDeleted = pokemons.find((pokemon) => pokemon.id === id);
 
